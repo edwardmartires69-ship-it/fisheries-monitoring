@@ -5,10 +5,10 @@ import os
 import psycopg2
 
 # ==========================================
-# 1. KONEKSI DATABASE (DARI DATABASE.PY)
+# 1. KONEKSAUN DATABASE (HUSI SECRETS)
 # ==========================================
 def get_connection():
-    # Streamlit Cloud akan membaca dari st.secrets
+    # Streamlit Cloud sei lee husi st.secrets (settings iha dashboard)
     return psycopg2.connect(
         host=st.secrets.get("DB_HOST", "localhost"),
         port=st.secrets.get("DB_PORT", "5432"),
@@ -36,7 +36,7 @@ def get_monthly_species_percentage():
         conn.close()
         return df
     except Exception as e:
-        st.error(f"Error Database Bulanan: {e}")
+        st.error(f"❌ Error Database Bulanan: {e}")
         return pd.DataFrame()
 
 def get_daily_cpue():
@@ -50,11 +50,11 @@ def get_daily_cpue():
         conn.close()
         return df
     except Exception as e:
-        st.error(f"Error Database Harian: {e}")
+        st.error(f"❌ Error Database Harian: {e}")
         return pd.DataFrame()
 
 # ==========================================
-# 2. TAMPILAN DASHBOARD (DARI WEB_GALERI.PY)
+# 2. TAMPILAN DASHBOARD
 # ==========================================
 st.set_page_config(page_title="Dashboard Monitorizasaun Peskas", layout="wide")
 st.title("🐟 Dashboard Monitorizasaun Peskas")
@@ -67,7 +67,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Kamus
+# Kamus tradusaun
 kamus_ikan = {
     'Tuna': 'Tuna', 'Tongkol': 'Mackerel Tuna', 'Cakalang': 'Skipjack Tuna',
     'Kakap': 'Snapper', 'Kerapu': 'Grouper', 'Bandeng': 'Milkfish',
@@ -114,7 +114,7 @@ if not df_monthly.empty:
     df_tampil.columns = ['Fish Species', 'Total Weight (kg)', 'Percentage (%)']
     st.dataframe(df_tampil, use_container_width=True, hide_index=True)
 else:
-    st.warning("Seidauk iha dadus peskas iha database. Favor hatama dadus uluk.")
+    st.warning("⚠️ Seidauk iha dadus peskas iha database, ka koneksaun falha.")
 
 # --- PARTE 2: DADUS LORON-LORON (CPUE) ---
 st.divider()
@@ -142,6 +142,7 @@ if not df_monthly.empty:
         species_tetun = row['species'] 
         percentage = row['percentage']
         weight = row['total_weight']
+        # Uza link imagem husi internet (placeholder se la iha)
         img_path = f"images/{species_tetun}.jpg" 
         
         with cols[index % 5]:
