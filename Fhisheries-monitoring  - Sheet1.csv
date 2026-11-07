@@ -1,0 +1,21 @@
+vessel_id,species,weight_kg,gear_type,fishing_ground,port
+KPL-01,Tuna,150.5,Longline,Laut Banda,Dili
+KPL-02,Cakalang,80.2,Purse Seine,Laut Sawu,Dili
+KPL-03,Tongkol,45.0,Gillnet,Laut Timor,Dili
+KPL-01,Kakap,30.5,Longline,Laut Banda,Dili
+KPL-04,Bandeng,12.0,Gillnet,Laut Wetar,Baucau
+KPL-02,Tuna,200.0,Purse Seine,Laut Sawu,Dili
+KPL-03,Kerapu,25.5,Longline,Laut Timor,Baucau
+KPL-05,Tongkol,60.0,Gillnet,Laut Banda,Dili
+KPL-06,Gurita,15.5,Bubu,Laut Banda,Dili
+KPL-07,Udang,5.2,Jaring,Laut Timor,Dili
+KPL-08,Kepiting,8.0,Bubu,Laut Wetar,Baucau
+KPL-06,Gurita,22.0,Bubu,Laut Banda,Dili
+KPL-09,Barakuda,40.0,Pancing,Laut Sawu,Dili
+KPL-10,Sardin,10.5,Jaring,Laut Timor,Dili
+KPL-11,Ikan Terbang,8.2,Jaring,Laut Banda,Dili
+KPL-12,Cumi-cumi,7.5,Bubu,Laut Banda,Dili
+KPL-13,Kerang,3.0,Manual,Pantai Dili,Dili
+KPL-14,Salem,22.0,Jaring,Laut Banda,Dili
+KPL-15,Nila,6.5,Jaring,Danau/Daratan,Dili
+KPL-16,Kerapu,18.0,Pancing,Laut Timor,Baucau
